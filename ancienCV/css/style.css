@@ -1,0 +1,267 @@
+body{
+	background: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	margin: 0;
+	padding: 0; 
+}
+
+h1{
+	font-size: 40px;
+	font-weight: normal;
+	text-align: center;
+}
+
+h2{
+	margin: 0;		
+}
+
+.contact_title, .loisir {
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+header{
+	height: 100px;
+}
+
+p{
+	margin-top: 0
+}
+
+.bold{
+	font-weight: bold;
+}
+
+
+
+nav{
+	width: 100%;
+	background-color: #424558;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+nav li{
+	list-style-type: none; /*supprime les puces des li*/
+	float: left;
+
+	 /*permet de mettre les li sur une seule ligne, si un élément possède
+	des enfants qui sont flottants en css, la hauteur de cet élément va collapser 
+	hauteur= 0). Pour modifier ce comportement il faut utiliser la propriété clear: fixed*/
+}/*pourquoi ne pas sélectionner comme ceci : .table li ?*/
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 15px;
+	padding: 20px 30px;/*pourquoi ne pas mettre le padding au niveau du sélecteur nav li ?*? pourquoi ne pas sélectionner comme ceci: .table */
+}
+
+.table{
+	display: table; /*permet d'annuler le comportement des parents dont la hauteur= 0px collaps*/
+	margin: 0 auto;/*permet de centrer les éléments du menu*/
+}
+
+.menu-ind:hover, .presentation{/*pseudo-classe*/
+	border-top: 5px solid #4C8;/*il va falloir déduire les 5px de la border-top du padding des li 
+	pour conserver la hauteur initiale du texte dans l'exemple 15 au lieu de 20*/
+	
+}
+
+.menu-exp:hover, .parcours{
+	border-top: 5px solid #f1dc4f;
+	
+}
+
+.menu-hob:hover{
+	border-top: 5px solid #0070BB;
+	
+}
+
+.menu-con:hover{
+	border-top: 5px solid #e44d26;
+	
+}
+
+nav li:hover a{
+	padding: 15px 30px 20px 30px;
+}
+  
+
+
+section{
+	min-height: 300px;
+	padding-bottom: 10px;
+	padding-top: 30px;
+ }
+
+.exp{
+	margin-bottom: 55px;
+}
+
+.sec{
+ 	margin: 0px 10%;
+ 	width: 60%; 
+ }
+
+.left{
+ 	float: left;
+ 	width: 30%;
+ }
+
+.right{
+ 	float: left;
+ 	width: 70%; 
+ }
+
+.cleft, .cright, .sousleft, .sousright{
+ 	width: 50%;
+ 	float: left;
+ }
+
+.sec::after, .exp::after, .reco::after{
+ 	content: "";
+ 	display: table;
+ 	clear: both;
+ }
+
+.presentation{
+	border-bottom: 5px solid #4C8;
+}
+
+ .sport{
+ 	border-top: 5px solid #0070BB;
+ 	border-bottom: 5px solid #0070BB;
+ 	/*background-color: rgba(228,77,128,0,15);*/
+ 	margin-bottom: 0px; 
+}
+
+
+.photo{
+ 	/*background-color: rgba(30,152,212,0.15);*/
+ 	border-bottom: 5px solid #0070BB;
+}
+
+.music{
+ 	/*background-color: rgba(240,255,69,0.15);*/
+ 	border-top: 5px solid #0070BB;
+}
+
+.web{
+ 	/*background-color: rgba(228,77,38,0.15);*/
+}
+
+ .contact{
+ 	border-top: 5px solid #e44d26;
+}
+
+@media screen and (max-width: 780px){
+	header{
+		height: 50px;
+	} 
+
+	h1{font-size: 28px;
+		margin: 20px 0px 0px 0px;
+	}
+
+	nav li a{
+		font-size: 12px;
+		padding: 10px;
+	}
+
+nav li:hover a{
+	padding: 5px 10px 10px 10px;
+	}/* pourquoi ne pas sélectionner comme ceci : li:hover a?*/
+}
+
+
+.footer{
+  text-align: center;
+}
+
+/*FOOTER*/
+
+.footercontact {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+footer li {
+	text-align: center;
+	list-style-type: none;
+	display: inline-block;
+	padding: 11px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+/*MENTIONS LEGALES*/
+
+.footermention {
+	text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*FORMULAIRE*/
+
+.bodyformu{
+}
+
+.form-container{ 
+    height: 100%;
+    background-image: url("../img/labo.jpg");
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.formulaire {
+	background-color: rgba(245,245,245,0.4);
+	margin: 0 auto;
+	padding: 40px 0;
+	width: 50%;
+}
+
+.formulaire label, .formulaire input, .formulaire textarea {
+	display: inline-block;
+	width: 30%;
+}
+
+.formulaire label {
+	text-align: right;
+	vertical-align: top;
+}
+
+.formulaire textarea {
+	height: 200px;
+}
+
+.button{
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 35px;
+    line-height: 70px;
+    text-shadow: 0px 0px 7px rgba(0, 0, 0, 0.75);
+}
+
+
